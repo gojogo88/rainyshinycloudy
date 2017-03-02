@@ -11,6 +11,7 @@
 		6C5F0AB91E66A5F600756F96 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F0AB81E66A5F600756F96 /* Constants.swift */; };
 		6C5F0ABB1E66A89300756F96 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F0ABA1E66A89300756F96 /* CurrentWeather.swift */; };
 		6C5F0ABD1E6701FD00756F96 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F0ABC1E6701FD00756F96 /* Forecast.swift */; };
+		6C5F0AC11E67FBA500756F96 /* AlamoDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F0AC01E67FBA500756F96 /* AlamoDownload.swift */; };
 		6CD496171E656DD00086A532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD496161E656DD00086A532 /* AppDelegate.swift */; };
 		6CD496191E656DD00086A532 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD496181E656DD00086A532 /* WeatherVC.swift */; };
 		6CD4961C1E656DD00086A532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD4961A1E656DD00086A532 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		6C5F0AB81E66A5F600756F96 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6C5F0ABA1E66A89300756F96 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		6C5F0ABC1E6701FD00756F96 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		6C5F0AC01E67FBA500756F96 /* AlamoDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoDownload.swift; sourceTree = "<group>"; };
 		6CD496131E656DD00086A532 /* rainyshinycloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rainyshinycloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD496161E656DD00086A532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CD496181E656DD00086A532 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				6C5F0AB81E66A5F600756F96 /* Constants.swift */,
 				6C5F0ABA1E66A89300756F96 /* CurrentWeather.swift */,
 				6C5F0ABC1E6701FD00756F96 /* Forecast.swift */,
+				6C5F0AC01E67FBA500756F96 /* AlamoDownload.swift */,
 			);
 			path = rainyshinycloudy;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			files = (
 				6CD496191E656DD00086A532 /* WeatherVC.swift in Sources */,
 				6CD496171E656DD00086A532 /* AppDelegate.swift in Sources */,
+				6C5F0AC11E67FBA500756F96 /* AlamoDownload.swift in Sources */,
 				6C5F0ABB1E66A89300756F96 /* CurrentWeather.swift in Sources */,
 				6C5F0AB91E66A5F600756F96 /* Constants.swift in Sources */,
 				6C5F0ABD1E6701FD00756F96 /* Forecast.swift in Sources */,
