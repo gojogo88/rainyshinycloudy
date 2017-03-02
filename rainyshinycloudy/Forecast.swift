@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alamofire
+//import Alamofire
 
 class  Forecast {
     
@@ -64,6 +64,7 @@ class  Forecast {
         
     }
     
+    init() { }
     init(weatherDict: Dictionary<String, AnyObject>) {
         
         if let temp = weatherDict["temp"] as? Dictionary<String, AnyObject> {

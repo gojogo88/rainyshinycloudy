@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alamofire
+//import Alamofire
 
 class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -25,22 +25,36 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //    var forecast: Forecast!
 //    var forecasts = [Forecast]()
     
+    let service = Service()
+    var currentWeather = CurrentWeather()
+    var forecast = Forecast()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//        
+//        currentWeather = CurrentWeather()  //instantiated as an empty CurrentWeather class
+//
+//        currentWeather.downloadWeatherDetails {
+//            self.downloadForecastData {
+//                self.updateMainUI()
+//            }
+//        }
         
-        currentWeather = CurrentWeather()  //instantiated as an empty CurrentWeather class
-
-        currentWeather.downloadWeatherDetails {
-            self.downloadForecastData {
-                self.updateMainUI()
-            }
+        service.downloadWeatherDetails { (weather) in
+            
+            self.service.downloadForecastData {_ in 
+            
+            self.currentWeather = weather
+            self.updateMainUI()
+            
+            print(weather)      //weather is the data object
+            print(self.forecast)
         }
-        
-        
-        
+        }
     
     }
     

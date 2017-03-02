@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alamofire
+//import Alamofire
 
 class CurrentWeather {
     
@@ -51,7 +51,8 @@ class CurrentWeather {
     }
     
     
-    init(dict: Dictionary<String, AnyObject>) {
+    init() { }
+    init(dict: Dictionary<String, AnyObject>) {    //Cannot instaniate without any data in it so we need a blank one before this
         
         if let name = dict["name"] as? String {
             
@@ -136,10 +137,9 @@ class CurrentWeather {
 
 }
 
-
-
-
-
-        
 }
+
+
+
+
 
