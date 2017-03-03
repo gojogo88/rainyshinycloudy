@@ -27,7 +27,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let service = Service()
     var currentWeather = CurrentWeather()
-    var forecast = Forecast()
+    var forecast = [Forecast]()
     
     
     override func viewDidLoad() {
@@ -46,16 +46,20 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         service.downloadWeatherDetails { (weather) in
             
-            self.service.downloadForecastData {_ in 
-            
             self.currentWeather = weather
             self.updateMainUI()
             
             print(weather)      //weather is the data object
+        
+        }
+
+        service.downloadForecastData { (dayforecast) in
+            self.forecast = [dayforecast]
+            self.updateMainUI()
             print(self.forecast)
+        
         }
-        }
-    
+
     }
     
 //    func downloadForecastData(completed: @escaping DownloadComplete) {
