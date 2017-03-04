@@ -18,19 +18,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var currentWeatherImage: UIImageView!
     @IBOutlet weak var currentWeatherLabel: UILabel!
     
-    @IBOutlet weak var weatherIcon: UIImageView!
-    @IBOutlet weak var dayLabel: UILabel!
-    @IBOutlet weak var dayweatherType: UILabel!
-    @IBOutlet weak var highTemp: UILabel!
-    @IBOutlet weak var lowTemp: UILabel!
-    
-
-    
     @IBOutlet weak var tableView: UITableView!
-    
-//    var currentWeather = CurrentWeather()
-//    var forecast: Forecast!
-//    var forecasts = [Forecast]()
     
     let service = Service()
     var currentWeather = CurrentWeather()
@@ -39,17 +27,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        
-//        currentWeather = CurrentWeather()  //instantiated as an empty CurrentWeather class
-//
-//        currentWeather.downloadWeatherDetails {
-//            self.downloadForecastData {
-//                self.updateMainUI()
-//            }
-//        }
+    
         
         service.downloadWeatherDetails { (weather) in
             
@@ -64,40 +42,13 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.forecastArr = dayforecast  //daytoforcast is already a completed passed array from service.swift
             
             for obj in self.forecastArr {
-           
+                
             print(obj.lowTemp)
             }
             self.tableView.reloadData()
         }
 
     }
-    
-//    func downloadForecastData(completed: @escaping DownloadComplete) {
-//        //Downloading forecast data for tableView
-//        let forecastURL = URL(string: FORECAST_URL)!
-//        Alamofire.request(forecastURL).responseJSON { response in
-//         
-//            let result = response.result
-//            
-//            if let dict = result.value as? Dictionary<String, AnyObject> {
-//                
-//                if let list = dict["list"] as? [Dictionary<String, AnyObject>] {
-//                    
-//                    for obj in list {
-//                        
-//                        let forecast = Forecast(weatherDict: obj)
-//                        self.forecasts.append(forecast)
-//                        print(obj)
-//                    }
-//                    
-//                }
-//                
-//            }
-//            
-//            completed()
-//        }
-//        
-//    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -109,10 +60,10 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? updateTableCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? WeatherCell {
             
             let forecast = forecastArr[indexPath.row]
-            cell.updateTableCell(forecast: forecast)
+            cell.configureCell(forecast: forecast)
             return cell
         } else {
             
@@ -130,16 +81,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
         
     }
-    
-    func updateTableCell(forecast: Forecast) {
-        
-        lowTemp.text = forecast.lowTemp
-        highTemp.text = forecast.highTemp
-        dayweatherType.text = forecast.weatherType
-        dayLabel.text = forecast.date
-        weatherIcon.image = UIImage(named: "\(forecast.weatherType) Mini")
-        
-    }
+
     
 
 }

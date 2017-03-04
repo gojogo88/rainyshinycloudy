@@ -19,6 +19,7 @@
 		6CD496211E656DD00086A532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD4961F1E656DD00086A532 /* LaunchScreen.storyboard */; };
 		6CD4962C1E656DD00086A532 /* rainyshinycloudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD4962B1E656DD00086A532 /* rainyshinycloudyTests.swift */; };
 		6CD496371E656DD00086A532 /* rainyshinycloudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD496361E656DD00086A532 /* rainyshinycloudyUITests.swift */; };
+		6CFEA8D81E6A776800D2E44B /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFEA8D71E6A776800D2E44B /* WeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		6CD496321E656DD00086A532 /* rainyshinycloudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rainyshinycloudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD496361E656DD00086A532 /* rainyshinycloudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rainyshinycloudyUITests.swift; sourceTree = "<group>"; };
 		6CD496381E656DD00086A532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CFEA8D71E6A776800D2E44B /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		E668E2260B10DD591E0EBD7D /* Pods_rainyshinycloudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rainyshinycloudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70AC4790D4066D0A7FAAEB0 /* Pods-rainyshinycloudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rainyshinycloudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rainyshinycloudy/Pods-rainyshinycloudy.debug.xcconfig"; sourceTree = "<group>"; };
 		EC3FEBAC6CF026CD827235A9 /* Pods-rainyshinycloudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rainyshinycloudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-rainyshinycloudy/Pods-rainyshinycloudy.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				6C5F0ABA1E66A89300756F96 /* CurrentWeather.swift */,
 				6C5F0ABC1E6701FD00756F96 /* Forecast.swift */,
 				6C5F0AC31E68149E00756F96 /* Service.swift */,
+				6CFEA8D71E6A776800D2E44B /* WeatherCell.swift */,
 			);
 			path = rainyshinycloudy;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				6C5F0ABB1E66A89300756F96 /* CurrentWeather.swift in Sources */,
 				6C5F0AB91E66A5F600756F96 /* Constants.swift in Sources */,
 				6C5F0ABD1E6701FD00756F96 /* Forecast.swift in Sources */,
+				6CFEA8D81E6A776800D2E44B /* WeatherCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
