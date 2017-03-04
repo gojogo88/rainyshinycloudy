@@ -31,9 +31,9 @@ class Service {
 
     }
     
-    func downloadForecastData(completed: @escaping (Forecast) -> ()) {  //that weather inside parenthesis is the key to let ur WeatherVC knows the data
+    func downloadForecastData(completed: @escaping ([Forecast]) -> ()) {  //that weather inside parenthesis is the key to let ur WeatherVC knows the data
         
-        var forecasts = [Forecast]()
+        var forecastArr = [Forecast]()
         
         //Alamofire download (parsing JSON data)
         let forecastURL = URL(string: FORECAST_URL)!
@@ -48,12 +48,12 @@ class Service {
                 
                 for obj in list {
             
-                    let forecast = Forecast(weatherDict: obj)
-                    forecasts.append(forecast)
-                    completed(forecast)
+                    let objtogoinforecastArr = Forecast(weatherDict: obj)   //Forecast is the class in Forecast.swift
+                    forecastArr.append(objtogoinforecastArr)
+
                 
                 }
-            
+                completed(forecastArr)
         }
         
     }

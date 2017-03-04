@@ -17,6 +17,13 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var currentWeatherImage: UIImageView!
     @IBOutlet weak var currentWeatherLabel: UILabel!
+    
+    @IBOutlet weak var weatherIcon: UIImageView!
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var dayweatherType: UILabel!
+    @IBOutlet weak var highTemp: UILabel!
+    @IBOutlet weak var lowTemp: UILabel!
+    
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -27,7 +34,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let service = Service()
     var currentWeather = CurrentWeather()
-    var forecast = [Forecast]()
+    var forecastArr = [Forecast]()
     
     
     override func viewDidLoad() {
@@ -54,10 +61,13 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
 
         service.downloadForecastData { (dayforecast) in
-            self.forecast = [dayforecast]
-            self.updateMainUI()
-            print(self.forecast)
-        
+            self.forecastArr = dayforecast  //daytoforcast is already a completed passed array from service.swift
+            
+            for obj in self.forecastArr {
+           
+            print(obj.lowTemp)
+            }
+            self.tableView.reloadData()
         }
 
     }
@@ -94,14 +104,21 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return forecastArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath)
-        
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? updateTableCell {
+            
+            let forecast = forecastArr[indexPath.row]
+            cell.updateTableCell(forecast: forecast)
+            return cell
+        } else {
+            
+            return WeatherCell()
+            
+        }
     }
     
     func updateMainUI() {
@@ -113,6 +130,17 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
         
     }
+    
+    func updateTableCell(forecast: Forecast) {
+        
+        lowTemp.text = forecast.lowTemp
+        highTemp.text = forecast.highTemp
+        dayweatherType.text = forecast.weatherType
+        dayLabel.text = forecast.date
+        weatherIcon.image = UIImage(named: "\(forecast.weatherType) Mini")
+        
+    }
+    
 
 }
 

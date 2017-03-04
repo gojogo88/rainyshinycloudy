@@ -83,7 +83,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Z1-fk-SqH" id="Oap-a2-zkL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xuB-h2-eBb">
@@ -165,8 +165,13 @@
                         <outlet property="currentWeatherImage" destination="Zdk-ZM-uAc" id="4iS-Df-RVh"/>
                         <outlet property="currentWeatherLabel" destination="tn8-1I-QFw" id="b3F-dd-0Ul"/>
                         <outlet property="dateLabel" destination="u29-hc-Euh" id="l7F-Ke-fW5"/>
+                        <outlet property="dayLabel" destination="Aq8-tm-hNV" id="Gn8-iX-gKy"/>
+                        <outlet property="dayweatherType" destination="RiS-k4-TLZ" id="dhv-5v-Vns"/>
+                        <outlet property="highTemp" destination="Jp9-Mj-jUv" id="Zwc-Nv-6fU"/>
                         <outlet property="locationLabel" destination="epc-gG-wQc" id="4Bi-09-DgH"/>
+                        <outlet property="lowTemp" destination="BnA-1I-ap3" id="EXu-cJ-bfg"/>
                         <outlet property="tableView" destination="CHF-n4-OFF" id="D0p-9a-g1e"/>
+                        <outlet property="weatherIcon" destination="xuB-h2-eBb" id="dB9-Kp-yum"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
