@@ -104,13 +104,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		6C5F0AC21E68148600756F96 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
 		6CD4960A1E656DD00086A532 = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +129,6 @@
 		6CD496151E656DD00086A532 /* rainyshinycloudy */ = {
 			isa = PBXGroup;
 			children = (
-				6C5F0AC21E68148600756F96 /* New Group */,
 				6CD496161E656DD00086A532 /* AppDelegate.swift */,
 				6CD496181E656DD00086A532 /* WeatherVC.swift */,
 				6CD4961A1E656DD00086A532 /* Main.storyboard */,
